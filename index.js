@@ -7,8 +7,8 @@ function generateWarriors(numbersOfWarriors){
     const warriors = [];
     for (let index = 0; index < numbersOfWarriors; index++) {
         warriors.push(generateSingleWarrior(index));
-        warriors[index].image = image[warriors[index].image[1]];
-        warriors[index].type = type[warriors[index].image[1]];
+        warriors[index].type = type[warriors[index].image];
+        warriors[index].image = image[warriors[index].image];
         warriors[index].damage = warriors[index].power * warriors[index].level;
     }
     return warriors;
